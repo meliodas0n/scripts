@@ -4,10 +4,13 @@ from bs4 import BeautifulSoup
 import subprocess
 import os
 
-# PATH = '/home/meliodas/Music/'
+"""
+  TODO: Make this code work for Revival album - which could be a category for some sort
+
+"""
+
 
 def download_songs(link, album):
-  # path = os.path.join(PATH + album)
   os.mkdir(album)
   html = subprocess.run(['curl', '-s', link], stdout = subprocess.PIPE, encoding = 'utf-8')
   html_content = html.stdout
